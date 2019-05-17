@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the d3 library. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+
+  <title>Legendary Coach</title>
+  <script src="scripts/d3.v4.min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:700" rel="stylesheet">
+  <!-- <script src="scripts/realTimeChartMulti.js" charset="utf-8"></script> -->
+
+  <!-- <script src="scripts/plot.js" charset="utf-8"></script> -->
+</head>
+
+<body>
+  <div id="head">
+    <div id="title">
+      <h4>Legendary Coach</h4>
+      <p>6.835: Intelligent Multimodal User Interaction
+          </br> Final Project Fall 2019</p>
+    </div>
+    <!-- <input id="debug" type="checkbox" name="debug" value="debug" style="margin-bottom: 10px" /> Debug
+    <input id="halt" type="checkbox" name="halt" value="halt" style="margin-bottom: 10px" /> Halt -->
+    <div id="legends">
+      <div id="counter"></div>
+      <div id="emotionLeg"></div>
+      <div id="details">
+        <p>Details:</br>
+            Communication Volumn Range: 0-100</br>
+            Game Sound Volumn Range: 0-100</br>
+            Gaze Average Offset: 0-1100 pixels</br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="vis-body">
+
+    <div id="player1" class="playerDiv">
+      <p class="playerInfo">PLAYER <br/><span class="enlarge">1</span></p>
+      <div id="emotionDivP1" class="emotion"></div>
+      <!-- <div id="heatmapDivP1" class="heatmap"></div> -->
+      <div class="barCaptions">
+        <p id="volLabelP1">Communication Volumn: --</p>
+        <p id="gameLabelP1">Game Sound Volumn: --</p>
+        <p id="gazeLabelP1">Gaze Average Offset: --</p>
+      </div>
+      <div id="barsP1" class="bars">
+        <div id="volumnDivP1" class="volumn"></div>
+        <div id="gameVolumnP1" class="gameVolumn"></div>
+        <div id="gazeSpeedP1" class="gazeSpeed"></div>
+      </div>
+    </div>
+
+    <div id="player2" class="playerDiv">
+      <p class="playerInfo">PLAYER <br/><span class="enlarge">2</span></p>
+      <div id="emotionDivP2" class="emotion"></div>
+      <!-- <div id="heatmapDivP2" class="heatmap"></div> -->
+      <div class="barCaptions">
+        <p id="volLabelP2">Communication Volumn: --</p>
+        <p id="gameLabelP2">Game Sound Volumn: --</p>
+        <p id="gazeLabelP2">Gaze Average Offset: --</p>
+      </div>
+      <div id="barsP2" class="bars">
+        <div id="volumnDivP2" class="volumn"></div>
+        <div id="gameVolumnP2" class="gameVolumn"></div>
+        <div id="gazeSpeedP2" class="gazeSpeed"></div>
+      </div>
+    </div>
+
+    <div id="player3" class="playerDiv">
+      <p class="playerInfo">PLAYER <br/><span class="enlarge">3</span></p>
+      <div id="emotionDivP3" class="emotion"></div>
+      <!-- <div id="heatmapDivP3" class="heatmap"></div> -->
+      <div class="barCaptions">
+        <p id="volLabelP3">Communication Volumn: --</p>
+        <p id="gameLabelP3">Game Sound Volumn: --</p>
+        <p id="gazeLabelP3">Gaze Average Offset: --</p>
+      </div>
+      <div id="barsP3" class="bars">
+        <div id="volumnDivP3" class="volumn"></div>
+        <div id="gameVolumnP3" class="gameVolumn"></div>
+        <div id="gazeSpeedP3" class="gazeSpeed"></div>
+      </div>
+    </div>
+
+    <div id="player4" class="playerDiv">
+      <p class="playerInfo">PLAYER <br/><span class="enlarge">4</span></p>
+      <div id="emotionDivP4" class="emotion"></div>
+      <!-- <div id="heatmapDivP4" class="heatmap"></div> -->
+      <div class="barCaptions">
+        <p id="volLabelP4">Communication Volumn: --</p>
+        <p id="gameLabelP4">Game Sound Volumn: --</p>
+        <p id="gazeLabelP4">Gaze Average Offset: --</p>
+      </div>
+      <div id="barsP4" class="bars">
+        <div id="volumnDivP4" class="volumn"></div>
+        <div id="gameVolumnP4" class="gameVolumn"></div>
+        <div id="gazeSpeedP4" class="gazeSpeed"></div>
+      </div>
+    </div>
+
+    <div id="player5" class="playerDiv">
+      <p class="playerInfo">PLAYER <br/><span class="enlarge">5</span></p>
+      <div id="emotionDivP5" class="emotion"></div>
+      <!-- <div id="heatmapDivP5" class="heatmap"></div> -->
+      <div class="barCaptions">
+        <p id="volLabelP5">Communication Volumn: --</p>
+        <p id="gameLabelP5">Game Sound Volumn: --</p>
+        <p id="gazeLabelP5">Gaze Average Offset: --</p>
+      </div>
+      <div id="barsP5" class="bars">
+        <div id="volumnDivP5" class="volumn"></div>
+        <div id="gameVolumnP5" class="gameVolumn"></div>
+        <div id="gazeSpeedP5" class="gazeSpeed"></div>
+      </div>
+    </div>
+
+    <div id="player6" class="playerDiv">
+      <p class="playerInfo">PLAYER <br/><span class="enlarge">6</span></p>
+      <div id="emotionDivP6" class="emotion"></div>
+      <!-- <div id="heatmapDivP6" class="heatmap"></div> -->
+      <div class="barCaptions">
+        <p id="volLabelP6">Communication Volumn: --</p>
+        <p id="gameLabelP6">Game Sound Volumn: --</p>
+        <p id="gazeLabelP6">Gaze Average Offset: --</p>
+      </div>
+      <div id="barsP6" class="bars">
+        <div id="volumnDivP6" class="volumn"></div>
+        <div id="gameVolumnP6" class="gameVolumn"></div>
+        <div id="gazeSpeedP6" class="gazeSpeed"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script> -->
+  <!--<script src="../_lib/d3.min.js"></script>-->
+  <script src="scripts/datatransfer.js" charset="utf-8"></script>
+</body>
+
+</html>

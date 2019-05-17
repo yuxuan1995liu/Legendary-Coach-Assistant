@@ -1,0 +1,227 @@
+body{
+  font-family: 'Vollkorn', serif;
+  background-color: lightgrey;
+}
+
+p.playerInfo{
+  float:left;
+  padding-left: 10px;
+  font-size: 10px;
+}
+
+.enlarge{
+  font-size: 30px;
+}
+
+div#head{
+  overflow: visible;
+  height:100px;
+  width:96%;
+  margin: 0 10px;
+  margin-top: 10px;
+}
+
+div#title{
+  width:40%;
+  height:100%;
+  float:left;
+  background-color: white;
+  margin-right: 10px;
+}
+
+div#title h4{
+  margin: 10px 10px;
+  font-size: 20px;
+}
+
+div#title p{
+  margin: 5px 10px;
+  font-size: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+div#legends{
+  width:59%;
+  height:100%;
+  background-color: white;
+  float:right;
+}
+
+div#counter{
+  height: 80px;
+  margin: 10px 10px;
+  font-size: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+  width:100px;
+  border-right: 1px solid black;
+  float:left;
+}
+
+div#emotionLeg{
+  float:left;
+  width:230px;
+  height: 80px;
+  margin: 10px 10px;
+  font-size: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+  border-right: 1px solid black;
+}
+
+div#details{
+  width:370px;
+  height:80px;
+  float:right;
+  margin: 10px 0px;
+  font-size: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+div#details p{
+  margin-top: 0;
+}
+
+div.timeLabel{
+  margin: 10px 10px;
+  font-size: 25px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+div#vis-body{
+  width:96%;
+  margin: 10px 10px;
+  overflow: hidden;
+}
+
+div.playerDiv{
+  width:100%;
+  height:100px;
+  margin: 4px 0%;
+  background-color: white;
+  padding: 10px;
+  overflow: visible;
+}
+
+rect.emotionColorBlock{
+
+}
+
+div.emotion{
+  width:140px;
+  margin: 0 10px;
+  margin-right: 25px;
+  height:100%;
+  float:left;
+  background-color: #e8e8e8;
+}
+
+div.heatmap{
+  width:100px;
+  margin: 0 10px;
+  height:100%;
+  background-color: #e8e8e8;
+  float:left;
+}
+
+div.barCaptions{
+  width:130px;
+  float:left;
+  font-size: 10px;
+}
+
+div.barCaptions p{
+  font-family: 'Noto Sans JP', sans-serif;
+  height:30px;
+  margin-top: 5px;
+  margin-bottom:0px;
+  text-align: right;
+}
+
+div.bars{
+  width:71%;
+  height:100%;
+  float:right;
+}
+
+div.volumn {
+  background-color: #e8e8e8;
+  width:95%;
+  height:35%;
+  /* margin-bottom: 5px; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+div.gameVolumn {
+  background-color: #e8e8e8;
+  width:95%;
+  height:35%;
+  /* margin-bottom: 5px; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+div.gazeSpeed{
+  background-color: #e8e8e8;
+  width:95%;
+  height:35%;
+  /* margin-bottom: 5px; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+svg.emotionSvg {
+  height: 100%;
+  width:70px;
+  float:left;
+}
+
+svg.faceSvg {
+  height: 100%;
+  width:70px;
+  float:right;
+}
+
+svg.volSvg{
+  margin-left: 10px;
+  min-width:95%;
+  height:100%;
+  overflow: visible;
+}
+
+svg.gazeSvg{
+  margin-left: 10px;
+  /* min-width:95%; */
+  height:100%;
+  /* overflow: visible; */
+  margin-right: red 1px solid;
+}
+
+svg.gameSvg{
+  margin-left: 10px;
+  min-width: 95%;
+  height:100%;
+  overflow: visible;
+}
+
+line.gazePlot{
+  stroke:#5F6B6D;
+  stroke-width:2px;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: white;
+  border:lightgrey solid 0.5px;
+}
+
+::-webkit-scrollbar
+{
+  height: 5px;
+  width: 5px;
+  background-color: lightgrey;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: lightgrey;
+}
